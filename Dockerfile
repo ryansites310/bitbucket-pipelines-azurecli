@@ -12,6 +12,7 @@ RUN add-apt-repository \
       "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
       $(lsb_release -cs) \
       stable"
+RUN apt-get update
 RUN apt-get install -y docker-ce
 
 # Download the necessary tools to deploy to kubernetes
