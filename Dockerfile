@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 # Add Docker to the base image
 RUN apt-get update
-RUN apt-get install \
+RUN apt-get -y install \
       apt-transport-https \
       ca-certificates \
       curl \
@@ -12,7 +12,7 @@ RUN add-apt-repository \
       "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
       $(lsb_release -cs) \
       stable"
-RUN apt-get install docker-ce
+RUN apt-get install -y docker-ce
 
 # Download the necessary tools to deploy to kubernetes
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
