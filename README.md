@@ -11,7 +11,7 @@ This base image enable Azure CLI on Bitbucket Pipelines continuous integration/d
 Specify this images in bitbucket-pipelines.yml
 
 ```
-image: pathtrk/bitbucket-pipelines-azurecli:latest
+image: ryansites310/bitbucket-pipelines-azurecli:latest
 ```
 
 ## Notice
